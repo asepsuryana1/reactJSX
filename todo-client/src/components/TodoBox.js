@@ -17,15 +17,16 @@ export default class TodoBox extends Component {
         }));
 
     }
-    deleteTodo() {
-
-    }
+    deleteTodo(id) {
+        this.setState((state) => ({
+            data: state.data.filter(item => item.id != id)
+        }))}
 
     render() {
         return (
             <div>
                 <h1> Daftar Todo</h1>
-                <TodoList data={this.state.data} />
+                <TodoList data={this.state.data} deleteTodo={this.deleteTodo} />
                 <TodoForm addTodo={this.addTodo} />
             </div>
         )

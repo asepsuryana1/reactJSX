@@ -12,10 +12,13 @@ export default class TodoForm extends Component {
   
     handleChange(event) {
       this.setState({value: event.target.value});
+      
     }
   
     handleSubmit(event) {
-      this.props.addTodo({task: this.state.value, complete: false});
+      const id = Date.now();
+      this.props.addTodo({ id, task: this.state.value, complete: false, sent: true })
+      this.setState({value: ""})
       event.preventDefault();
     }
   
