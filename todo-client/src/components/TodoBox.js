@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
 
 
-export default class TodoForm extends Component {
+export default class TodoBox extends Component {
     onstructor(props) {
         super(props);
-        this.state = { data: '' };
+        this.state = { data: [] };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.addTodo = this.addTodo.bind(this);
+        this.deleteTodo = this.deleteTodo.bind(this);
     }
+    addTodo() {
 
+    }
+    deleteTodo() {
 
+    }
 
     render() {
 
