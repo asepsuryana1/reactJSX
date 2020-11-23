@@ -6,7 +6,7 @@ import TodoForm from './TodoForm'
 export default class TodoBox extends Component {
     constructor(props) {
         super(props);
-        this.state = { data: [{ task: 'belajar coding', complete: true }] };
+        this.state = { data: [] };
 
         this.addTodo = this.addTodo.bind(this);
         this.deleteTodo = this.deleteTodo.bind(this);
@@ -26,7 +26,7 @@ export default class TodoBox extends Component {
             <div>
                 <h1> Daftar Todo</h1>
                 <TodoList data={this.state.data} />
-                <TodoForm addTodo={this.state.addTodo} />
+                <TodoForm addTodo={this.addTodo} />
             </div>
         )
     }
