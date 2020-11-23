@@ -1,8 +1,10 @@
 import React from 'react';
 import TodoItem from './TodoItem'
 
+
+//embed must use {}
 export default function TodoList(props){
-    const listItems = numbers.map((number) =>
-  <li>{number}</li>
+    const listItems = props.data.map((item, index) =>
+ <TodoItem key = {index} todo={item} />
 );
 } 
