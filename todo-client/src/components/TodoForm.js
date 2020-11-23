@@ -23,7 +23,7 @@ export default class TodoForm extends Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            Name:
+            Task:
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
