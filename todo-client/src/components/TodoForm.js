@@ -15,7 +15,7 @@ export default class TodoForm extends Component {
     }
   
     handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
+      this.props.addTodo({task: this.state.value, complete: false});
       event.preventDefault();
     }
   

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TodoList from './TodoList'
+import TodoForm from './TodoForm'
 
 
 export default class TodoBox extends Component {
@@ -10,9 +11,9 @@ export default class TodoBox extends Component {
         this.addTodo = this.addTodo.bind(this);
         this.deleteTodo = this.deleteTodo.bind(this);
     }
-    addTodo() {
-        this.setState((state, props) => ({
-            counter: state.counter + props.increment
+    addTodo(todo) {
+        this.setState((state) => ({
+            data: [...state.data, todo] 
         }));
 
     }
@@ -25,6 +26,7 @@ export default class TodoBox extends Component {
             <div>
                 <h1> Daftar Todo</h1>
                 <TodoList data={this.state.data} />
+                <TodoForm addTodo={this.state.addTodo} />
             </div>
         )
     }
