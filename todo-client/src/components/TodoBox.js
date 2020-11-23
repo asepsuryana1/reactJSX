@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import TodoList from './TodoList'
 
 
 export default class TodoBox extends Component {
-    onstructor(props) {
+    constructor(props) {
         super(props);
         this.state = { data: [] };
 
@@ -17,6 +18,11 @@ export default class TodoBox extends Component {
     }
 
     render() {
-
+        return (
+            <div>
+                <h1> Daftar Todo</h1>
+                <TodoList data={this.state.data} />
+            </div>
+        )
     }
 }
