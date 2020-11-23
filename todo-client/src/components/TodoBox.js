@@ -5,12 +5,15 @@ import TodoList from './TodoList'
 export default class TodoBox extends Component {
     constructor(props) {
         super(props);
-        this.state = { data: [{task:'belajar coding', complete: true}] };
+        this.state = { data: [{ task: 'belajar coding', complete: true }] };
 
         this.addTodo = this.addTodo.bind(this);
         this.deleteTodo = this.deleteTodo.bind(this);
     }
     addTodo() {
+        this.setState((state, props) => ({
+            counter: state.counter + props.increment
+        }));
 
     }
     deleteTodo() {
