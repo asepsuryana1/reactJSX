@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import TodoBox from './components/TodoBox';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Hello, world!</h1>
+    <TodoBox/>
   </React.StrictMode>,
   document.getElementById('root')
 );
